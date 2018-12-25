@@ -1,0 +1,53 @@
+/* intro */
+.js{
+  /*****************************  Header *****************************/
+  &__header{background:$base-color1;
+    &__inner{position:relative; width:100%; height:100%; /*background:url(../image/contents_visual/main_visual.png) center no-repeat; background-size:500px;*/
+      &--logo{position:absolute; top:50px; left:260px; z-index:1; width:100px; height:50px; background:url(../image/common/logo.png) 0 0 no-repeat;}
+      &--menu{position:absolute; top:65px; right:200px; z-index:1 ;width:122px; height:26px; background:url(../image/common/menu.png) 0 0 no-repeat;}
+      .prologue{position:absolute;top:50%; left:50%; transform:translate(-50%, -50%); width:100%; text-align:center; text-transform:uppercase; @include textShadow;}
+    }
+  }
+  /*****************************  //Header *****************************/
+  /*****************************  Container *****************************/
+  &__container{display:none; background-image: linear-gradient(167deg, #c90000, #950089 21%, #3b00ff 42%, #00a7ff 63%, #63f2cb 82%, #d8ff00); height:8000px;
+    &__contents{width:100%;
+      &__profile{position:relative; padding-top:352px; min-height:1200px; overflow:hidden;
+        h2{padding-left:493px; @include textShadow;}
+        &--section{padding-left:689px; padding-top:50px;}
+        &--image{
+          .bullet__bg__1{width:604px; height:604px; top:300px; left:-150px;}
+          .bullet__bg__2{width:180px; height:83px; top:735px; left:185px;}
+          .bullet__bg__3{width:60px; height:60px; top:298px; left:432px;}
+          .bullet__bg__4{width:768px; height:768px; top:510px; right:0px;}
+          .bullet__bg__5{width:305px; height:184px; top:450px; right:-30px;}
+          .bullet__bg__6{width:93px; height:93px; bottom:0px; right:-20px;}
+        } 
+      }
+      &__project{position:relative; padding-top:450px; min-height:1200px; overflow:hidden;
+        h2{width:100%; text-align:center;}
+        &--section{position:relative; margin-top:122px;
+          .section__title{position:absolute; top:102px; left:230px; transform:rotate(-90deg); font-size:43px; font-weight:900; color:#fff;}
+          .inner__section{position:relative;
+            &.first__section{width:1076px; min-height:1724px; margin:0 auto; background:url(../image/common/bg/port_section01.png) 0 0 no-repeat;}
+            &__contents{letter-spacing:-5px;
+              &__info{display:inline-block; vertical-align:top; letter-spacing:0px; padding-right:40px;}
+              &__visual{border:15px solid #fff; display:inline-block; vertical-align:top; letter-spacing:0px;}
+            }
+            .product--first{position:absolute; top:168px; right:-50px;}
+          }
+        }
+      }
+      // &__photo{width:100%; display:table; text-align:center;
+      //   .photo__contents{@include vertical; cursor:pointer; width: 200px; height: 200px;  border-radius:4px; background-size:200px 200px; margin-right:40px; transition: all .5s; animation: item-in .5s ease-in-out; animation-delay: 0.3s;
+      //     &:nth-child(1){animation-delay: .5s;}
+      //     &:nth-child(2){animation-delay: .6s;}
+      //     &:nth-child(3){animation-delay: .7s;}
+      //     &:nth-child(4){animation-delay: .8s; margin-right:0px;}
+      //     &:hover{box-shadow: 0 30px 80px 0 rgba( 97, 45, 45, 0.45); transform: translateY(-20px);}
+      //   }
+      // }
+    }
+  }
+  /***************************** // Container *****************************/
+}

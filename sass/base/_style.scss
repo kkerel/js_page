@@ -1,0 +1,70 @@
+@charset 'utf-8';
+$NnBa:'Nanum Barun Gothic', sans-serif;
+$NnSq:'Nanum Square', sans-serif;
+$Tm:'TmonMonsori', sans-serif;
+
+/*bg*/
+$base-color1:#000;
+/* font color */
+$fColor-1:#fff;
+$fColor-2:#000;
+/* s1 = small1 ~ */
+$fSize-s1:12px;
+$fSize-s2:14px;
+/* positioning */
+$re:relative;
+$ab:absolute;
+$fx:fixed;
+/* body bg class */
+$color-1:#ffd1dc;
+$color-2:#1E1F29;
+$color-3:#077584;
+$color-4:#E44F26;
+
+/* body bg */
+body{transition: all 0.7s ease-in-out;}
+
+@mixin boxSizing() {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+}
+
+@mixin vertical() {
+	vertical-align:middle;
+	display:inline-block;
+}
+
+@mixin textShadow(){
+	text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* radius photo image */
+@for $v from 1 through 10 {
+	.visual_#{$v} {background:url('../image/contents_visual/mini_visual_#{$v}.jpg') center center no-repeat;}
+}
+
+/* profile image bg & bullet image*/
+@for $b from 1 through 6 {
+	.bullet__bg__#{$b} {background:url('../image/common/bg/profile_bullet_#{$b}.png') 0 0 no-repeat; position:absolute;}
+}
+
+
+/* body bg class */
+.bg1{background:$color-1;}
+.bg2{background:$color-2;}
+.bg3{background:$color-3;}
+.bg4{background:$color-4;}
+
+/* title */
+.title__widget{font-size:110px; font-weight:600; color:#fff;}
+
+/* contents text */
+.contents__text__widget{
+	h3{font-size:20px; line-height:40px; font-weight:bold; color:#ffac27; @include textShadow;}
+	ul{
+		li{font-size:20px; color:#fff; line-height:34px; @include textShadow;}
+	}
+}
