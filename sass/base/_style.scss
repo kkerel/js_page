@@ -1,7 +1,6 @@
 @charset 'utf-8';
-$NnBa:'Nanum Barun Gothic', sans-serif;
-$NnSq:'Nanum Square', sans-serif;
-$Tm:'TmonMonsori', sans-serif;
+$basic:'Montserrat', sans-serif;
+$basic-bold:'MontserratBold', sans-serif;
 
 /*bg*/
 $base-color1:#000;
@@ -41,14 +40,28 @@ body{transition: all 0.7s ease-in-out;}
 	text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* radius photo image */
-@for $v from 1 through 10 {
-	.visual_#{$v} {background:url('../image/contents_visual/mini_visual_#{$v}.jpg') center center no-repeat;}
+@mixin boxShadow(){
+	box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* profile image bg & bullet image*/
-@for $b from 1 through 6 {
-	.bullet__bg__#{$b} {background:url('../image/common/bg/profile_bullet_#{$b}.png') 0 0 no-repeat; position:absolute;}
+/* radius photo image */
+@for $visual from 1 through 10 {
+	.visual_#{$visual} {background:url('../image/contents_visual/mini_visual_#{$visual}.jpg') center center no-repeat;}
+}
+
+/* profile image bg & bullet image */
+@for $profile from 1 through 6 {
+	.profile__bg__#{$profile} {background:url('../image/common/bg/profile_bg_#{$profile}.png') 0 0 no-repeat; position:absolute;}
+}
+
+/* project image bg */
+@for $project from 1 through 4 {
+	.port__bg__#{$project} {background:url('../image/common/bg/port_bg_#{$project}.png') 0 0 no-repeat; position:absolute;}
+}
+
+/* contents image */
+@for $contents from 1 through 4 {
+	.contents__visual__#{$contents} {background:url('../image/contents_visual/contents_visual_#{$contents}.jpg') center no-repeat; background-size:cover;}
 }
 
 
@@ -59,12 +72,14 @@ body{transition: all 0.7s ease-in-out;}
 .bg4{background:$color-4;}
 
 /* title */
-.title__widget{font-size:110px; font-weight:600; color:#fff;}
+.title__widget{font-size:110px; font-weight:900; color:#fff;}
 
 /* contents text */
 .contents__text__widget{
 	h3{font-size:20px; line-height:40px; font-weight:bold; color:#ffac27; @include textShadow;}
 	ul{
-		li{font-size:20px; color:#fff; line-height:34px; @include textShadow;}
+		li{font-size:20px; color:#fff; line-height:34px; font-family:'';
+			a{color:#fff;}
+		}
 	}
 }

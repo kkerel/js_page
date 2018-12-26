@@ -1,6 +1,13 @@
 @charset 'utf-8';
+
 @font-face {
   font-family: 'Montserrat';
-  font-style: normal;
-  src: url('../fonts/Montserrat-Light.otf');
+  src: url('../fonts/Montserrat-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('../fonts/Montserrat-Black.ttf') format("TrueType"),
+  url('../fonts/Montserrat-Black.otf') format("opentype");
+}
+
