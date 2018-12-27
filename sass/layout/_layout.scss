@@ -22,30 +22,55 @@
           .profile__bg__4{width:768px; height:768px; top:510px; right:0px;}
           .profile__bg__5{width:305px; height:184px; top:450px; right:-30px;}
           .profile__bg__6{width:93px; height:93px; bottom:0px; right:-20px;}
-        } 
+        }
       }
       &__project{position:relative; padding-top:450px; overflow:hidden;
         h2{width:100%; @include textShadow; text-align:center; font-family:$basic-bold;}
         &--section{position:relative; margin-top:122px;
           .section__title{position:absolute; top:102px; left:50%; margin-left:-700px; transform:rotate(-90deg); font-size:43px; font-weight:900; color:#fff; @include textShadow;}
           .inner__section{position:relative;
-            &.first__section{width:1076px; min-height:2500px; margin:0 auto; background:url(../image/common/bg/port_section01.png) 0 0 no-repeat;}
+            // 첫번재 프로젝트 영역
+            &.first__section{width:100%; min-height:1724px; margin:0 auto; background:url(../image/common/bg/port_section01.png) top center no-repeat;}
+            // 두번재 프로젝트 영역
+            &.second__section{width:100%; min-height:2500px; margin:0 auto; background:url(../image/common/bg/port_section02.png) -120px 0px no-repeat; margin-top:283px;}
+            // 프로젝트 영역 컨텐츠 s
             &__contents{position:absolute; letter-spacing:-5px; z-index:10;
               &__info{display:inline-block; vertical-align:top; letter-spacing:0px;}
               &__visual{border:15px solid #fff; display:inline-block; vertical-align:top; letter-spacing:0px; @include boxShadow;}
-              &.product--first{top:168px; right:-80px;
-                .inner__section__contents__visual{width:430px; height:600px;}
+              &.product--first{top:168px; right:50%; margin-right:-620px;
+                .inner__section__contents__visual{width:440px; height:640px;}
                 .inner__section__contents__info{padding-right:40px;}
               }
-              &.product--second{width:1500px; top:650px; left:-234px;
-                .inner__section__contents__visual{width:920px; height:680px; vertical-align:middle;}
-                .inner__section__contents__info{vertical-align:middle; padding-left:40px;}
+              &.product--second{top:650px; left:50%; margin-left:-720px;
+                .inner__section__contents__visual{width:860px; height:620px; vertical-align:middle;}
+                .inner__section__contents__info{padding-left:40px; vertical-align:middle;}
               }
-              &.product--third{top:1460px; left:-100px;
-                .inner__section__contents__visual{width:440px; height:540px;}
+              &.product--third{top:1400px; left:50%; margin-left:-610px;
+                .inner__section__contents__visual{width:380px; height:480px;}
                 .inner__section__contents__info{padding-left:40px;}
               }
+              &.product--fourth{top:-243px; left:50%; margin-left:-713px; display:table;
+                .inner__section__contents__visual{width:630px; height:700px; vertical-align:bottom;}
+                .inner__section__contents__info{padding-right:40px; vertical-align:bottom;}
+              }
+              &.product--fifth{top:637px; right:50%; margin-right:-755px; z-index:15;
+                .inner__section__contents__visual{width:760px; height:540px; vertical-align:top;}
+                .inner__section__contents__info{padding-right:40px; vertical-align:top;}
+              }
+              &.product--sixth{bottom:785px; left:50%; margin-left:-765px;
+                .inner__section__contents__visual{width:900px; height:600px; vertical-align:middle;}
+                .inner__section__contents__info{padding-left:40px; vertical-align:middle;}
+              }
+              &.product--seventh{bottom:0px; right:50%; margin-right:-765px;
+                .inner__section__contents__visual{width:550px; height:600px; display:block;}
+                .inner__section__contents__info{display:block;}
+              }
+              &.product--eighthh{bottom:-760px; left:50%; margin-left:-515px;
+                .inner__section__contents__visual{width:650px; height:1020px; display:block;}
+                .inner__section__contents__info{display:block;}
+              }
             }
+            // 프로젝트 영역 컨텐츠 e
           }
         }
         &--image{
@@ -53,6 +78,7 @@
           .port__bg__2{width:261px; height:149px; top:706px; right:-50px;}
           .port__bg__3{width:744px; height:698px; top:1015px; left:-240px;}
           .port__bg__4{width:1197px; height:1197px; top:600px; right:-400px;}
+          .port__bg__5{width:1219px; height:1219px; bottom:1230px; left:-440px;}
         }
       }
        &__photo{width:100%; display:table; text-align:center;
