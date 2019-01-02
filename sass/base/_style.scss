@@ -21,7 +21,7 @@ $color-3:#3b00ff;
 $color-4:#00a7ff;
 
 /* body bg */
-body{transition: all 0.45s ease-in-out;}
+body{transition: all 0.45s ease-in-out; background:#000;}
 
 @mixin boxSizing() {
 	box-sizing:border-box;
@@ -87,19 +87,24 @@ body{transition: all 0.45s ease-in-out;}
 /* bx slider */
 .bx-wrapper{width:100%; max-width:100%!important;}
 
-/* 메인 visual fadein */
-.prologue{animation: prologue 2s; -webkit-animation: prologue 2s;}
-.js__header__inner__title{animation: title 2s; -webkit-animation: title 2s;}
-.js__header__inner--menu{animation: menu 2s; -webkit-animation: menu 2s;}
+/* main visual fadein */
+.prologue{animation: prologue 1s; -webkit-animation: prologue 1s;}
+.js__header__inner__title{animation: title 1s; -webkit-animation: title 1s;}
+.js__header__inner--menu{animation: menu 1s; -webkit-animation: menu 1s;}
+.js__header__inner__bg{animation: visual 1s; -webkit-animation: visual 1s;}
 @-webkit-keyframes prologue {
 	from { opacity:0; top:55%; }
 	to { opacity:1; top: 50%; }
 }
 @-webkit-keyframes title {
 	from { opacity:0; left: 200px; }
-	to { opacity:1; left: 240px; }
+	to { opacity:1; left: 260px; }
 }
 @-webkit-keyframes menu {
-	from { opacity:0; top:55%; }
+	from { opacity:0; right:160px; }
+	to { opacity:1; right: 200px; }
+}
+@-webkit-keyframes visual {
+	from { opacity:0; top:47%; }
 	to { opacity:1; top: 50%; }
 }
