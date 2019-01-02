@@ -1,11 +1,23 @@
-$(function(){
-    quick();
-    title();
-    heightCheck();
-    // bodyCheck();
-    asideAction();
-    // browserCheck();
-})
+function bxSliders(obj, width, margin, count, controller, auto, loop) {
+    var options = {
+        mode: 'horizontal',
+        speed: 300,
+        pause: 4000,
+        touchEnabled: true,
+        auto: auto,
+        responsive: true,
+        autoHover: false,
+        minSlides: 1,
+        slideWidth:width,
+        slideMargin:margin,
+        maxSlides: count,
+        infiniteLoop:loop,
+        moveSlides: 1
+    };
+    options['controls'] = (controller == 'controls') ? true:(controller == 'all') ? true:false;
+    options['pager'] = (controller == 'pager') ? true:(controller == 'all') ? true:false;
+    var slider = $(obj).bxSlider(options);
+}
 
 function heightCheck(){
     headerHeight = $(window).height()
@@ -17,9 +29,10 @@ function heightCheck(){
 }
 
 function title() {
-    var text = $('.js__title_text');
+    var text = $('.js__header__inner__text');
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
+        console.log(scroll);
         if (scroll >= 1) {
             text.removeClass('hidden');
         } else {
@@ -38,7 +51,7 @@ function quick() {
 
 function bodyCheck() {
     var $body = $("body");
-    var numberOfSections = 0;
+    var numberOfSections = 2;
     var sectionOffsets = [];
     for(var i = 0; i < numberOfSections + 1; i++) {
         sectionOffsets.push($('.js__container__contents').eq(i).offset());
@@ -96,4 +109,16 @@ function browserCheck() {
         alert("본 사이트는 크롬,파이어폭스 브라우저에 최적화 되어있습니다.\n\n 크롬 브라우저를 사용해주시기 바랍니다.");
         window.open('about:blank','_self').self.close();  // IE에서 묻지 않고 창 닫기
     }
+}
+
+function headerText() {
+    var dummy_text = Array(700).join('j u n e s u');
+    $('.js__header__inner__bg').text(dummy_text);
+}
+
+function visualRotate() {
+    $(window).scroll(function() {
+        var rotateValue = ($(window).scrollTop() / 10 );
+        $('.profile__bg__2,.profile__bg__3,.profile__bg__5').css({ transform: 'rotate(' + rotateValue + 'deg)' });
+    });
 }

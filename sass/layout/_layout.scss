@@ -1,16 +1,25 @@
+
 /* intro */
 .js{
   /*****************************  Header *****************************/
   &__header{background:$base-color1;
-    &__inner{position:relative; width:100%; height:100%; /*background:url(../image/contents_visual/main_visual.png) center no-repeat; background-size:500px;*/
-      &--logo{position:absolute; top:50px; left:260px; z-index:1; width:100px; height:50px; background:url(../image/common/logo.png) 0 0 no-repeat;}
-      &--menu{position:absolute; top:65px; right:200px; z-index:1 ;width:122px; height:26px; background:url(../image/common/menu.png) 0 0 no-repeat;}
+    &__inner{position:relative; width:100%; height:100%; display:flex; justify-content:center; align-items:center;
+      &__bg{width:280px; margin:0 auto; height:550px; background:url(../image/contents_visual/main_visual.jpg) center no-repeat; background-size:550px; -webkit-background-clip:text; -webkit-text-fill-color:rgba(255,255,255,0); font-size:10px; line-height:6px; text-align:justify;}
+      &__title{position:fixed; top:50px; left:260px; z-index:20;
+        .js__header__inner__text{transition: all 0.5s ease-in-out;
+          &.hidden{
+            .hide{opacity:0; max-width:0px;}
+          }
+          li{max-width:1em; font-family:$basic-bold; font-size:30px; color:#fff; display:inline-block; transition: all 0.4s ease-in-out; opacity:1;}
+        }
+      }
+      &--menu{position:fixed; top:65px; right:200px; z-index:20; width:122px; height:26px; background:url(../image/common/menu.png) 0 0 no-repeat;}
       .prologue{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%; text-align:center; text-transform:uppercase; @include textShadow; font-family:$basic-bold;}
     }
   }
   /*****************************  //Header *****************************/
   /*****************************  Container *****************************/
-  &__container{display:none; background-image: linear-gradient(167deg, #c90000, #950089 21%, #3b00ff 42%, #00a7ff 63%, #63f2cb 82%, #d8ff00); height:8000px;
+  &__container{display:none;
     &__contents{width:100%;
       &__profile{position:relative; padding-top:352px; min-height:1200px; overflow:hidden;
         h2{padding-left:25%; @include textShadow; font-family:$basic-bold;}
@@ -26,13 +35,13 @@
       }
       &__project{position:relative; padding-top:450px; overflow:hidden;
         h2{width:100%; @include textShadow; text-align:center; font-family:$basic-bold;}
-        &--section{position:relative; margin-top:122px;
+        &--section{position:relative; margin-top:122px; -webkit-perspective: 300px; perspective: 300px;
           .section__title{position:absolute; top:102px; left:50%; margin-left:-700px; transform:rotate(-90deg); font-size:43px; font-weight:900; color:#fff; @include textShadow;}
-          .inner__section{position:relative;
+          .inner__section{position:relative; transform-style: preserve-3d; -webkit-transform-style: preserve-3d;
             // 첫번재 프로젝트 영역
             &.first__section{width:100%; min-height:1724px; margin:0 auto; background:url(../image/common/bg/port_section01.png) top center no-repeat;}
             // 두번재 프로젝트 영역
-            &.second__section{width:100%; min-height:2500px; margin:0 auto; background:url(../image/common/bg/port_section02.png) -120px 0px no-repeat; margin-top:283px;}
+            &.second__section{width:100%; min-height:3500px; margin:0 auto; background:url(../image/common/bg/port_section02.png) -120px 0px no-repeat; margin-top:283px;}
             // 프로젝트 영역 컨텐츠 s
             &__contents{position:absolute; letter-spacing:-5px; z-index:10;
               &__info{display:inline-block; vertical-align:top; letter-spacing:0px;}
@@ -57,17 +66,17 @@
                 .inner__section__contents__visual{width:760px; height:540px; vertical-align:top;}
                 .inner__section__contents__info{padding-right:40px; vertical-align:top;}
               }
-              &.product--sixth{bottom:785px; left:50%; margin-left:-765px;
+              &.product--sixth{top:1105px; left:50%; margin-left:-765px;
                 .inner__section__contents__visual{width:900px; height:600px; vertical-align:middle;}
                 .inner__section__contents__info{padding-left:40px; vertical-align:middle;}
               }
-              &.product--seventh{bottom:0px; right:50%; margin-right:-765px;
+              &.product--seventh{top:1740px; right:50%; margin-right:-765px;
                 .inner__section__contents__visual{width:550px; height:600px; display:block;}
-                .inner__section__contents__info{display:block;}
+                .inner__section__contents__info{display:block; padding-top:40px;}
               }
-              &.product--eighthh{bottom:-760px; left:50%; margin-left:-515px;
+              &.product--eighthh{top:2155px; left:50%; margin-left:-515px;
                 .inner__section__contents__visual{width:650px; height:1020px; display:block;}
-                .inner__section__contents__info{display:block;}
+                .inner__section__contents__info{display:block; padding-top:40px;}
               }
             }
             // 프로젝트 영역 컨텐츠 e
@@ -82,11 +91,13 @@
         }
       }
        &__photo{width:100%; display:table; text-align:center;
-         .photo__contents{@include vertical; cursor:pointer; width: 200px; height: 200px;  border-radius:4px; background-size:200px 200px; margin-right:40px; transition: all .5s; animation: item-in .5s ease-in-out; animation-delay: 0.3s; border-radius:50%;
+         .photo__contents{@include vertical; cursor:pointer; width: 200px; height: 200px; border-radius:4px; background-size:200px 200px; margin:0px 20px; transition: all .5s; animation: item-in .5s ease-in-out; animation-delay: 0.3s; border-radius:50%;
            &:nth-child(1){animation-delay: .5s;}
            &:nth-child(2){animation-delay: .6s;}
            &:nth-child(3){animation-delay: .7s;}
-           &:nth-child(4){animation-delay: .8s; margin-right:0px;}
+           &:nth-child(4){animation-delay: .8s;}
+           &:nth-child(5){animation-delay: .9s;}
+           &:nth-child(6){animation-delay: 1.0s;}
            &:hover{box-shadow: 0 30px 80px 0 rgba( 97, 45, 45, 0.45); transform: translateY(-20px);}
          }
        }

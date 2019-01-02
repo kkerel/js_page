@@ -3,6 +3,7 @@ ajaxHtmlCall('.header','GET','layout/header.html','html', true, headerFunctions)
 ajaxHtmlCall('.footer','GET','layout/footer.html','html', true, footerFunctions);
 // 퀵매뉴 호출
 ajaxHtmlCall('.quick','GET','layout/quick.html','html', true, quickFunctions);
+
 $('.js__container').show();
 controlFunctions();
 
@@ -11,6 +12,8 @@ controlFunctions();
 function headerFunctions() {
 	title();
     quick();
+    // header dummy text
+    headerText();
 }
 function footerFunctions() {}
 function quickFunctions() {}
