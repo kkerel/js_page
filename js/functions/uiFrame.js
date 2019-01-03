@@ -52,12 +52,11 @@ function bodyCheck() {
 
         for(var i = 0; i < numberOfSections + 1; i++) {
             if(scrollTop > sectionOffsets[i].top) {
-                $body.removeClass().addClass("bg" + (i + 1));
+                $body.removeClass().addClass("section" + (i + 1));
             }
         }
     });
 }
-
 function browserCheck() {
     var browser = function() {
         // Return cached result if avalible, else get result then cache it.
@@ -106,17 +105,11 @@ function visualRotate() {
     });
 }
 
-function load() {
-    $(function (){
-        $('body').addClass('bg1');
-    })
-}
-
 function contentsAnimate() {
     var body = $('body').hasClass('bg2');
-    console.log('작동');
-    if(body === true){
-        console.log('123');
+    console.log(body);
+    if(body == true){
+        console.log(body);
         $('.product--first').animate({right:'200px'}, 'fast')
     }
 }
