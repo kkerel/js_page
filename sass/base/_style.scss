@@ -105,14 +105,3 @@ body{transition: all 0.45s ease-in-out; background:#000;}
 	from { opacity:0; top:47%; }
 	to { opacity:1; top: 50%; }
 }
-
-/* menu section color */
-body.section1{
-	.js__header__inner--menu{color:#d8ff00;}
-}
-body.section2{
-	.js__header__inner--menu{color:#c90000;}
-}
-body.section3{
-	.js__header__inner--menu{color:#00a7ff;}
-}

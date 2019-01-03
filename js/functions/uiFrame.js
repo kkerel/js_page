@@ -100,7 +100,7 @@ function headerText() {
 
 function visualRotate() {
     $(window).scroll(function() {
-        var rotateValue = ($(window).scrollTop() / 10 );
+        var rotateValue = ($(window).scrollTop() / 50 );
         $('.profile__bg__2,.profile__bg__3,.profile__bg__5').css({ transform: 'rotate(' + rotateValue + 'deg)' });
     });
 }

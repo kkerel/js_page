@@ -8,6 +8,7 @@ controlFunctions();
 //Layout Html CallBack Functions
 function headerFunctions() {
     headerText();
+    title();
 }
 function footerFunctions() {}
 function quickFunctions() {}
