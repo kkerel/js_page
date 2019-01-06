@@ -12,7 +12,7 @@ function indexFunctions() {
     title();
     heightCheck();
     bodyCheck();
-    contentsAnimate();
+    contentsFade();
     // browserCheck();
     // visualRotate();
 }

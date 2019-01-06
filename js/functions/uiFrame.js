@@ -105,11 +105,16 @@ function visualRotate() {
     });
 }
 
-function contentsAnimate() {
-    var body = $('body').hasClass('bg2');
-    console.log(body);
-    if(body == true){
-        console.log(body);
-        $('.product--first').animate({right:'200px'}, 'fast')
-    }
+function contentsFade(){
+    $(window).scroll( function(){
+        $('.inner__section__contents').each( function(){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).addClass('text');
+            }else if( bottom_of_window < bottom_of_object ){
+                $(this).removeClass('text');
+            }
+        });
+    });
 }
