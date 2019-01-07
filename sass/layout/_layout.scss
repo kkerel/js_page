@@ -1,4 +1,3 @@
-.text{transform: translate3d(0px, 50px, 0px); transition:all 1s ease-in-out; transform:rotate(1deg); transform-style:preserve-3d;}
 /* intro */
 .js{
   /*****************************  Header *****************************/
@@ -36,12 +35,20 @@
       &__project{position:relative; padding-top:450px; overflow:hidden;
         h2{width:100%; @include textShadow; text-align:center; font-family:$basic-bold;}
         &--section{position:relative; margin-top:122px;
-          .section__title{position:absolute; top:102px; left:50%; margin-left:-700px; transform:rotate(-90deg); font-size:43px; font-weight:900; color:#fff; @include textShadow;}
+          .section__title{position:absolute; top:102px; left:50%; z-index:10; margin-left:-700px; transform:rotate(-90deg); font-size:43px; font-weight:900; color:#fff; @include textShadow;}
+          .title--effect{
+            div{width:100px; height:100px; background-color:#ff2782; border-radius:50%; position:absolute; top:110px; left:50%; z-index:9; margin-left:-645px; transition: all .45s ease;
+              &:nth-child(2){opacity:0.75; top:160px;}
+              &:nth-child(3){opacity:0.4; top:210px;}
+              &:nth-child(4){opacity:0.2; top:260px;}
+            }
+          }
           .inner__section{position:relative;
             &.first__section{width:100%; min-height:1724px; margin:0 auto; background:url(../image/common/bg/port_section01.png) top center no-repeat;}
             &.second__section{width:100%; min-height:3500px; margin:0 auto; background:url(../image/common/bg/port_section02.png) -120px 0px no-repeat; margin-top:283px;}
             &.third__section{width:100%; min-height:1724px; margin:0 auto; background:url(../image/common/bg/port_section01.png) -120px 0px no-repeat; margin-top:283px;}
-            &__contents{position:absolute; letter-spacing:-5px; z-index:10; transition:all 1s ease-in-out;
+            &__contents{position:absolute; letter-spacing:-5px; z-index:10; transform: translate3d(0px, 00px, 0px); transition:all 1s ease-in-out; opacity:0;
+              &.active{transform: translate3d(0px, 30px, 0px); transition:all 0.7s ease-in-out; transform-style:preserve-3d; opacity:1;}
               &__info{display:inline-block; vertical-align:top; letter-spacing:0px;}
               &__visual{border:15px solid #fff; display:inline-block; vertical-align:top; letter-spacing:0px; @include boxShadow;}
               &.product--first{top:168px; right:50%; margin-right:-620px;

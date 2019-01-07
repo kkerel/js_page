@@ -98,10 +98,10 @@ function headerText() {
     $('.js__header__inner__bg').text(dummy_text);
 }
 
-function visualRotate() {
+function firstRotate() {
     $(window).scroll(function() {
-        var rotateValue = ($(window).scrollTop() / 50 );
-        $('.profile__bg__2,.profile__bg__3,.profile__bg__5').css({ transform: 'rotate(' + rotateValue + 'deg)' });
+        var rotateValue = ($(window).scrollTop() / 40 );
+        $('.section1 .profile__bg__2,.section1 .profile__bg__3,.section1 .profile__bg__5').css({ transform: 'rotate(' + rotateValue + 'deg)' });
     });
 }
 
@@ -111,9 +111,9 @@ function contentsFade(){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             if( bottom_of_window > bottom_of_object ){
-                $(this).addClass('text');
+                $(this).addClass('active');
             }else if( bottom_of_window < bottom_of_object ){
-                $(this).removeClass('text');
+                $(this).removeClass('active');
             }
         });
     });

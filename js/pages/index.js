@@ -14,5 +14,5 @@ function indexFunctions() {
     bodyCheck();
     contentsFade();
     // browserCheck();
-    // visualRotate();
+    firstRotate();
 }
