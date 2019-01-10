@@ -109,12 +109,21 @@ function contentsFade(){
     $(window).scroll( function(){
         $('.inner__section__contents').each( function(){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            var bottom_of_window = $(window).scrollTop() + $(window).height() + 250;
             if( bottom_of_window > bottom_of_object ){
                 $(this).addClass('active');
             }else if( bottom_of_window < bottom_of_object ){
                 $(this).removeClass('active');
             }
         });
+        
+    });
+}
+
+function contents(){
+    $(".inner__section__contents").mouseover(function(){
+        $(this).css('z-index','100');
+    }).mouseout(function(){
+        $(this).css('z-index','50');
     });
 }
