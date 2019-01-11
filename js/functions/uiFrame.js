@@ -57,6 +57,7 @@ function bodyCheck() {
         }
     });
 }
+
 function browserCheck() {
     var browser = function() {
         // Return cached result if avalible, else get result then cache it.
@@ -109,21 +110,22 @@ function contentsFade(){
     $(window).scroll( function(){
         $('.inner__section__contents').each( function(){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() + 250;
+            var bottom_of_window = $(window).scrollTop() + $(window).height() + 100;
             if( bottom_of_window > bottom_of_object ){
                 $(this).addClass('active');
             }else if( bottom_of_window < bottom_of_object ){
                 $(this).removeClass('active');
             }
         });
-        
-    });
-}
 
-function contents(){
-    $(".inner__section__contents").mouseover(function(){
-        $(this).css('z-index','100');
-    }).mouseout(function(){
-        $(this).css('z-index','50');
+        $('.photo__contents').each( function(){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height() - 100;
+            if( bottom_of_window > bottom_of_object ){
+                $(this).addClass('active');
+            }else if( bottom_of_window < bottom_of_object ){
+                $(this).removeClass('active');
+            }
+        });
     });
 }

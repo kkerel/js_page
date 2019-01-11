@@ -7,14 +7,10 @@ define(['jquery','jquery-ui','layout'], function($) {
 
 //index Functions
 function indexFunctions() {
-    //배너 슬라이드
-    // bxSliders('.main-slide-banner .main-banner-slider', 200, 0, 4, '', true, true);
     title();
     heightCheck();
     bodyCheck();
     contentsFade();
     // browserCheck();
     firstRotate();
-    // contents();
-
 }

@@ -21,7 +21,7 @@ $color-3:#3b00ff;
 $color-4:#00a7ff;
 
 /* body bg */
-body{transition: all 0.45s ease-in-out; background:#000;}
+body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 
 @mixin boxSizing() {
 	box-sizing:border-box;
@@ -36,17 +36,26 @@ body{transition: all 0.45s ease-in-out; background:#000;}
 	display:inline-block;
 }
 
+/* contents text shadow */
 @mixin textShadow(){
-	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+	text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* contents mobile text shadow */
+@mixin MobiletextShadow(){
+	text-shadow: 5px 5px 10px rgba(2, 75, 147, 0.3);
+}
+
+/* contents box shadow */
 @mixin boxShadow(){
-	box-shadow: 15px 15px 30px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 15px 15px 40px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* radius photo image */
 @for $visual from 1 through 10 {
-	.visual_#{$visual} {background:url('../image/contents_visual/mini_visual_#{$visual}.jpg') center center no-repeat;}
+	.visual_#{$visual} {width:200px; height:200px; margin:0 auto; border-radius:50%; transition: all .4s; background:#fff url('../image/contents_visual/mini_visual_#{$visual}.jpg') center center no-repeat; display:block;
+		&:hover{box-shadow: 0 30px 80px 0 rgba( 97, 45, 45, 0.45); transform: translateY(-20px); transition: all .4s;}
+	}
 }
 
 /* profile image bg & bullet image */
@@ -60,8 +69,8 @@ body{transition: all 0.45s ease-in-out; background:#000;}
 }
 
 /* contents image */
-@for $contents from 1 through 4 {
-	.contents__visual__#{$contents} {background:url('../image/contents_visual/contents_visual_#{$contents}.jpg') center no-repeat; background-size:cover;}
+@for $contents from 1 through 20 {
+	.contents__visual__#{$contents} {background:#fff url('../image/contents_visual/contents_visual_#{$contents}.jpg') center no-repeat;}
 }
 
 /* title */
@@ -69,9 +78,9 @@ body{transition: all 0.45s ease-in-out; background:#000;}
 
 /* contents text */
 .contents__text__widget{
-	h3{font-size:22px; line-height:40px; font-weight:bold; color:#ffac27; @include textShadow;}
-	ul{
-		li{font-size:18px; color:#fff; line-height:34px; font-family:''; @include textShadow;
+	dl{
+		dt{font-size:22px; line-height:40px; font-weight:bold; color:#ffac27; @include textShadow;}
+		dd{font-size:18px; color:#fff; line-height:34px; font-family:''; @include textShadow;
 			a{color:#fff;}
 		}
 	}
