@@ -12,7 +12,12 @@
           li{max-width:1em; font-family:$basic-bold; font-size:30px; color:#fff; display:inline-block; transition: all 0.4s ease-in-out; opacity:1;}
         }
       }
-      &--menu{position:fixed; top:50px; right:200px; z-index:20; font-family:$basic-bold; font-size:30px; color:#FFAC27;}
+      &--menu{position:fixed; top:50px; right:200px; z-index:20; font-family:$basic-bold; font-size:30px; color:#FFAC27;
+        .menu__wrap{padding-top:20px;
+          a{font-size:20px; text-transform:uppercase;}
+          .on{color:#fff;}
+        }
+      }
       .prologue{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%; text-align:center; text-transform:uppercase; @include textShadow; font-family:$basic-bold;}
     }
   }
@@ -20,20 +25,19 @@
   /*****************************  Container *****************************/
   &__container{display:none;
     &__contents{width:100%;
-      &__profile{position:relative; padding-top:352px; min-height:1200px; overflow:hidden;
-        h2{padding-left:25%; @include textShadow; font-family:$basic-bold;}
+      h2{width:100%; @include textShadow; text-align:center; font-family:$basic-bold; padding-top:250px;}
+      &__profile{position:relative; min-height:1200px; overflow:hidden;
         &--section{padding-left:37%; padding-top:50px;}
         &--image{
           .profile__bg__1{width:604px; height:604px; top:300px; left:-150px;}
           .profile__bg__2{width:180px; height:83px; top:735px; left:185px;}
-          .profile__bg__3{width:60px; height:60px; top:298px; left:22.5%;}
+          .profile__bg__3{width:60px; height:60px; top:148px; left:22.5%;}
           .profile__bg__4{width:768px; height:768px; top:510px; right:0px;}
           .profile__bg__5{width:305px; height:184px; top:450px; right:-30px;}
           .profile__bg__6{width:93px; height:93px; bottom:0px; right:-20px;}
         }
       }
-      &__project{position:relative; padding-top:450px; overflow:hidden;
-        h2{width:100%; @include textShadow; text-align:center; font-family:$basic-bold;}
+      &__project{position:relative; overflow:hidden;
         &--section{position:relative; margin-top:122px;
           .section__title{position:absolute; top:102px; left:50%; z-index:10; margin-left:-700px; transform:rotate(-90deg); font-size:43px; font-weight:900; color:#fff; @include textShadow;}
           .title--effect{
@@ -43,19 +47,19 @@
               &:nth-child(4){opacity:0.2; top:260px;}
             }
           }
-          .inner__section{position:relative;
+          .inner__section{position:relative; overflow:hidden;
             &.first__section{width:100%; min-height:1724px; margin:0 auto; background:url(../image/common/bg/port_section01.png) top center no-repeat;}
             &.second__section{width:100%; min-height:3700px; margin:0 auto; background:url(../image/common/bg/port_section02.png) -120px 0px no-repeat; margin-top:283px;}
             &.third__section{width:100%; min-height:1724px; margin:0 auto; background:url(../image/common/bg/port_section01.png) -120px 0px no-repeat; margin-top:283px;}
             &__contents{position:static; letter-spacing:-5px; z-index:10; transform: translate3d(0px, 0px, 0px); transition:all 0.4s ease-in-out; opacity:0; display:flex; flex-direction:row; justify-content:center; align-items:center;
-              &:nth-child(even){transition: all 0.4s ease-in-out;
+              &:nth-child(even){
                 .inner__section__contents__visual__wrapper{transition: all 0.4s ease-in-out;
-                  &:hover{transform: rotate(1deg); @include boxShadow; border: 15px solid #FFAC27;} 
+                  &:hover{transform: rotate(1deg); @include boxShadow; border:15px solid #fa7268; transition: all 0.4s ease-in-out;} 
                 }
               }
-              &:nth-child(odd){transition: all 0.4s ease-in-out;
+              &:nth-child(odd){
                 .inner__section__contents__visual__wrapper{transition: all 0.4s ease-in-out;
-                  &:hover{transform: rotate(-1deg); @include boxShadow; border: 15px solid #FFAC27;}
+                  &:hover{transform: rotate(-1deg); @include boxShadow; border:15px solid #5f4b8b; transition: all 0.4s ease-in-out;}
                 }  
               }
               &.active{transition:all 0.4s ease-in-out; transform-style:preserve-3d; opacity:1;}
@@ -107,14 +111,14 @@
             }
           }
         }
-        .port__bg__1{width:216px; height:217px; top:320px; left:50%; margin-left:-420px; z-index:1;}
+        .port__bg__1{width:216px; height:217px; top:120px; left:50%; margin-left:-420px; z-index:1;}
         .port__bg__2{width:261px; height:149px; top:706px; right:-50px; z-index:1;}
         .port__bg__3{width:744px; height:698px; top:1015px; left:-240px; z-index:1;}
         .port__bg__4{width:1197px; height:1197px; top:600px; right:-400px; z-index:1;}
         .port__bg__5{width:1219px; height:1219px; top:3000px; left:-440px; z-index:1;}
       }
        &__photo{width:100%;
-         &__contents{width:100%; min-height:2000px; display:flex; align-items:center; flex-direction:column; justify-content:center;
+         &__contents{width:100%; min-height:1500px; display:flex; align-items:center; flex-direction:column;
            .photo__contents{width:300px; @include vertical; cursor:pointer; margin:0px 40px; opacity:0; -webkit-transition: .4s ease-in-out; transform: translate3d(0px, 0px, 0px);
               &.active{opacity:1;
                 &:nth-child(even){transform: translate3d(15px, -30px, 0px);}

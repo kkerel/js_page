@@ -13,4 +13,5 @@ function indexFunctions() {
     contentsFade();
     // browserCheck();
     firstRotate();
+    scrollActive();
 }

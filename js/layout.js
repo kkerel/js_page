@@ -9,6 +9,7 @@ controlFunctions();
 function headerFunctions() {
     headerText();
     title();
+    scrollAchor();
 }
 function footerFunctions() {}
 function quickFunctions() {}

@@ -80,7 +80,7 @@ body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 .contents__text__widget{
 	dl{
 		dt{font-size:22px; line-height:40px; font-weight:bold; color:#ffac27; @include textShadow;}
-		dd{font-size:18px; color:#fff; line-height:34px; font-family:''; @include textShadow;
+		dd{font-size:18px; color:#fff; line-height:34px; font-family:''; @include textShadow; font-weight:bold;
 			a{color:#fff;}
 		}
 	}
