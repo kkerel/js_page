@@ -24,13 +24,13 @@ function title() {
 // section body addclass
 function bodyCheck() {
     var $body = $("body");
-    var numberOfSections = 2;
+    var numberOfSections = 3;
     var sectionOffsets = [];
     for(var i = 0; i < numberOfSections + 1; i++) {
-        sectionOffsets.push($('.js__container__contents').eq(i).offset());
+        sectionOffsets.push($('article').eq(i).offset());
     }
     $(window).scroll(function() {
-        var scrollTop = $(this).scrollTop();
+        var scrollTop = $(this).scrollTop() + 100;
 
         for(var i = 0; i < numberOfSections + 1; i++) {
             if(scrollTop > sectionOffsets[i].top) {
@@ -121,7 +121,7 @@ function scrollActive() {
     $(window).scroll(function () {
         var scrollDistance = $(window).scrollTop();
         $('article').each(function (i) {
-            if($(this).position().top - 51 <= scrollDistance) {
+            if($(this).position().top  <= scrollDistance) {
                 $('a[href*="#"]:not([href="#"]).on').removeClass('on');
                 $('a').eq(i).addClass('on');
             }
