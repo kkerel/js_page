@@ -2,7 +2,9 @@
 ajaxHtmlCall('.header','GET','layout/header.html','html', true, headerFunctions);
 ajaxHtmlCall('.quick','GET','layout/quick.html','html', true, quickFunctions);
 
-$('.js__container').show();
+
+$('.js__container__contents').show();
+
 controlFunctions();
 
 

@@ -79,40 +79,35 @@ function browserCheck() {
 
 // visual text
 function headerText() {
-    var dummy_text = Array(500).join('j u n e s u');
+    var dummy_text = Array(1000).join('j u n e s u');
     $('.js__header__inner__bg').text(dummy_text);
 }
 
 // icon rotate
 function firstRotate() {
     $(window).scroll(function() {
-        var rotateValue = ($(window).scrollTop() / 40 );
-        $('.section1 .profile__bg__2,.section1 .profile__bg__3,.section1 .profile__bg__5').css({ transform: 'rotate(' + rotateValue + 'deg)' });
+        var Value = ($(window).scrollTop() / 8 );
+        var RotateValue = ($(window).scrollTop() / 500 );
+        $('.section2 .profile__bg__3').css({ 'transform' : 'rotate(' + Value + 'deg)'});
+        $('.section2 .profile__bg__2,.section2 .profile__bg__5').css({ 'transform' : 'rotate('+ RotateValue +'deg) translate3d(0px,' + Value + 'px, 0px)'});
     });
 }
 
 // contents fade
 function contentsFade(){
-    $(window).scroll( function(){
-        $('.inner__section__contents').each( function(){
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() + 100;
-            if( bottom_of_window > bottom_of_object ){
-                $(this).addClass('active');
-            }else if( bottom_of_window < bottom_of_object ){
-                $(this).removeClass('active');
-            }
-        });
-
-        $('.photo__contents').each( function(){
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() - 100;
-            if( bottom_of_window > bottom_of_object ){
-                $(this).addClass('active');
-            }else if( bottom_of_window < bottom_of_object ){
-                $(this).removeClass('active');
-            }
-        });
+    checkActive = (add) => function() {
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height() + (add ? 370 : -100);
+        if (bottom_of_window > bottom_of_object) {
+            $(this).addClass('active');
+        } else if (bottom_of_window < bottom_of_object) {
+            $(this).removeClass('active');
+        }
+    };
+    $(window).scroll(function() {
+        $('.inner__section__contents').each(checkActive(true)) + 370; 
+        $('.photo__contents').each(checkActive(true)) + 370; 
+        $('.title--effect').each(checkActive(true)) + 370; 
     });
 }
 

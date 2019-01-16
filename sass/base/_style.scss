@@ -51,6 +51,13 @@ body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 	box-shadow: 15px 15px 40px 0 rgba(0, 0, 0, 0.3);
 }
 
+/* vender */
+@mixin vendor($name, $value) {
+  @each $i in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$i}#{$name}: #{$value};
+  }
+}
+
 /* radius photo image */
 @for $visual from 1 through 10 {
 	.visual_#{$visual} {width:200px; height:200px; margin:0 auto; border-radius:50%; transition: all .4s; background:#fff url('../image/contents_visual/mini_visual_#{$visual}.jpg') center center no-repeat; display:block;
@@ -89,7 +96,7 @@ body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 /* main visual fadein */
 .prologue{animation: prologue 1.5s; -webkit-animation: prologue 1.5s;}
 .js__header__inner__title{animation: title 1.5s; -webkit-animation: title 1.5s;}
-.js__header__inner--menu{animation: menu 1.5s; -webkit-animation: menu 1.5s;}
+.js__header__inner__menu{animation: menu 1.5s; -webkit-animation: menu 1.5s;}
 .js__header__inner__bg{animation: visual 1.5s; -webkit-animation: visual 1.5s;}
 
 @-webkit-keyframes prologue {
@@ -124,4 +131,19 @@ body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 }
 .section4{
 	.menu-mobile{background:#fff url('../image/common/mobile.png') center no-repeat; display:block; @include boxShadow;}
+}
+
+// portfolio text effect
+.section3{
+	.title--effect{
+		&.active{
+			div{
+				&:nth-child(1){transform: translate3d(0px, 0px, 0px);}
+				&:nth-child(2){transform: translate3d(0px, 50px, 0px);}
+				&:nth-child(3){transform: translate3d(0px, 100px, 0px);}
+				&:nth-child(4){transform: translate3d(0px, 150px, 0px);}
+				&:nth-child(5){transform: translate3d(0px, 200px, 0px);}
+			}
+		}
+	}
 }
