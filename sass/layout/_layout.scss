@@ -1,43 +1,47 @@
-.js{
+.js{display:none;
   /*****************************  Header *****************************/
   &__header{background:$base-color1;
-    &__inner{position:relative; width:100%; height:100%;
-      &__bg{width:280px; height:550px; margin:0 auto; background:url(../image/contents_visual/main_visual.jpg) center no-repeat; background-size:550px; @include vendor(background-clip,text); -webkit-text-fill-color:rgba(255,255,255,0); font-size:10px; line-height:6px; text-align:justify; position: absolute; top: 50%; left: 50%;  transform: translate(-50%,-50%);}
-      &__title{position:fixed; top:50px; left:100px; z-index:20;
-        .js__header__inner__text{transition: all 0.5s ease-in-out; @include textShadow;
-          &.hidden{
-            .hide{opacity:0; max-width:0px;}
-          }
-          li{max-width:1em; font-family:$basic-bold; font-size:30px; color:#fff; display:inline-block; transition: all 0.4s ease-in-out; opacity:1;}
+    &--title{position:fixed; top:50px; left:100px; z-index:20;
+      .js__header--text{transition: all 0.5s ease-in-out; @include textShadow;
+        &.hidden{
+          .hide{opacity:0; max-width:0px;}
         }
+        li{max-width:1em; font-family:$basic-bold; font-size:30px; color:#fff; display:inline-block; transition: all 0.4s ease-in-out; opacity:1;}
       }
-      &__menu{position:fixed; top:50px; right:100px; z-index:20; color:#fff;
-      	.menu{
-      		li{position:absolute; top:0; right:0px; z-index:1; transition: all 0.4s ease; width:70px; height:70px; border-radius:100%; text-indent:-9999px;}
-      	}
-      }
-      .prologue{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%; text-align:center; text-transform:uppercase; @include textShadow; font-family:$basic-bold;}
+    }
+    &--menu{width:70px; height:70px; position:fixed; top:50px; right:100px; z-index:20; color:#fff;
+    	.menu{
+    		li{position:absolute; top:0; right:0px; z-index:1; transition: all 0.4s ease; width:70px; height:70px; border-radius:100%; text-indent:-9999px;}
+    	}
     }
   }
   /*****************************  //Header *****************************/
   /*****************************  Quick *****************************/
   &__quick{position:fixed; bottom:10px; left:10px; z-index:20; font-family:$basic-bold; font-size:30px;
     .menu{
-      a{width:220px; font-size:30px; text-transform:uppercase; display:block; position: relative; z-index: 1; width: 100%; height: 100%; cursor: pointer;
+      a{width:220px; font-size:30px; text-transform:uppercase; display:block; position: relative; z-index: 1; width: 100%; height: 100%; cursor: pointer; text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
         &.on{color:#fff; @include textShadow;}
       }
     }
   }
   /*****************************  //Quick ***************************/
+  /*****************************  Home *****************************/
+  .home{background:#000; position:relative;
+  	&--visual{width:280px; height:550px; margin:0 auto; background:url(../image/contents_visual/main_visual.jpg) center no-repeat; background-size:550px; @include vendor(background-clip,text); -webkit-text-fill-color:rgba(255,255,255,0); font-size:10px; line-height:6px; text-align:justify; position: absolute; top: 50%; left: 50%;  transform: translate(-50%,-50%);}
+		.prologue{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%; text-align:center; text-transform:uppercase; text-shadow: 5px 5px 0px rgba(255, 255, 255, 0.3); font-family:$basic-bold;}
+  }
+  /*****************************  //Home ***************************/
   /*****************************  Container *****************************/
-  &__container{background:url(../image/common/bg/container_bg.jpg) 0 0  no-repeat; background-size:100% 100%;
-    &__contents{width:100%; display:none;
-      h2{width:100%; @include textShadow; text-align:center; font-family:$basic-bold; padding-top:250px;}
+  &__container{background:url(../image/common/bg/container_bg.jpg) 0 0  no-repeat; background-size:cover;
+    &__contents{width:100%; padding-top:150px;
+      h2{width:100%; @include textShadow; text-align:center; font-family:$basic-bold; position:relative; padding-top:100px;
+      	p{font-size:70px; position:absolute; top:100px; left:50%; margin-left:-300px; transform:rotate(-40deg); color:#ffac27; text-transform:uppercase; opacity:0.9;}
+      }
       &__profile{position:relative; min-height:1200px; overflow:hidden;
         &--section{padding-left:37%; padding-top:50px;}
         &--image{
           .profile__bg__2{width:180px; height:83px; top:735px; left:185px;}
-          .profile__bg__3{width:60px; height:60px; top:148px; left:22.5%;}
+          .profile__bg__3{width:60px; height:60px; top:0px; left:22.5%;}
           .profile__bg__5{width:305px; height:184px; top:450px; right:100px;}
         }
       }
@@ -58,7 +62,7 @@
             }
             &.second__section{width:100%; min-height:3700px; margin:0 auto; background:url(../image/common/bg/port_section02.png) -120px 0px no-repeat; margin-top:283px;}
             &.third__section{width:100%; min-height:1724px; margin:0 auto; background:url(../image/common/bg/port_section01.png) -120px 0px no-repeat; margin-top:283px;}
-            &__contents{position:static; letter-spacing:-5px; z-index:10; transform: translate3d(0px, 0px, 0px); transition:all 0.4s ease-in-out; opacity:0; display:flex; flex-direction:row; justify-content:center; align-items:center;
+            &__contents{position:static; z-index:10; transform: translate3d(0px, 0px, 0px); transition:all 0.4s ease-in-out; opacity:0; display:flex; flex-direction:row; justify-content:center; align-items:center;
               &:nth-child(even){
                 .inner__section__contents__visual__wrapper{transition: all 0.4s ease-in-out;
                   &:hover{transform: rotate(1deg); @include boxShadow; border:15px solid #fa7268; transition: all 0.4s ease-in-out;} 
@@ -70,9 +74,8 @@
                 }  
               }
               &.active{transition:all 0.4s ease-in-out; transform-style:preserve-3d; opacity:1;}
-              &__info{display:inline-block; vertical-align:top; letter-spacing:0px;}
               &__visual__wrapper{background:#fff; border:15px solid #f1f1f1;}
-              &__visual{width:100%; height:100%; display:inline-block; vertical-align:top; letter-spacing:0px; @include boxShadow;}
+              &__visual{width:100%; height:100%; display:block; @include boxShadow;}
               &.product--first{transform: translate3d(20px, 150px, 0px);
                 &.active{transform: translate3d(50px, 150px, 0px);}
                 .inner__section__contents__visual__wrapper{width:440px; height:640px; margin-right:-150px;}
@@ -119,7 +122,7 @@
           }
         }
         .port__bg__1{width:216px; height:217px; top:120px; left:50%; margin-left:-420px; z-index:1;}
-        .port__bg__2{width:261px; height:149px; top:706px; right:-50px; z-index:1;}
+        .port__bg__2{width:261px; height:149px; top:1700px; right:-50px; z-index:1;}
         .port__bg__3{width:744px; height:698px; top:1015px; left:-240px; z-index:1;}
         .port__bg__4{width:1197px; height:1197px; top:600px; right:-400px; z-index:1;}
         .port__bg__5{width:1219px; height:1219px; top:3000px; left:-440px; z-index:1;}
@@ -128,8 +131,8 @@
          &__contents{width:100%; min-height:1500px; display:flex; align-items:center; flex-direction:column;
            .photo__contents{width:300px; @include vertical; cursor:pointer; margin:0px 40px; opacity:0; -webkit-transition: .4s ease-in-out; transform: translate3d(0px, 0px, 0px);
               &.active{opacity:1; transition: all 0.4s ease-in-out; transform-style: preserve-3d;
-                &:nth-child(even){transform: translate3d(15px, -30px, 0px);}
-                &:nth-child(odd){transform: translate3d(-15px, 30px, 0px);}
+                &:nth-child(even){transform: translate3d(15px, -15px, 0px);}
+                &:nth-child(odd){transform: translate3d(-15px, 15px, 0px);}
               }
               &:nth-child(even){margin-top:300px;}
               &:nth-child(odd){margin-bottom:150px;}

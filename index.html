@@ -12,6 +12,7 @@
 	<meta name="title" content="타이틀">
 	<meta name="description" content="내용">
 	<meta name="keywords" content="키워드">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="shortcut icon" href="image/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -22,14 +23,22 @@
 </head>
 <body>
 	<main class="js">
-		<div class="js__quick quick"></div>
+		<!-- 메뉴-->
+		<div class="js__quick"></div>
+		<!-- // 메뉴-->
+		<!-- 헤더 -->
+		<header id="header" class="js__header"></header>
+		<!-- // 헤더 -->
+		<!-- 메인 -->
+		<article id="home" class="home">
+			<div class="home--visual"></div>
+			<div class="prologue title__widget">lim, june su portfolio</div>
+		</article>
+		<!-- // 메인 -->
 		<!-- 컨테이너 -->
 		<section class="js__container">
-			<!-- 헤더 -->
-			<article id="header">
-				<header class="js__header header"></header>
-			</article>
-			<article id="profile" class="js__container__contents contents--first">
+			<!-- 프로필 -->
+			<article id="profile" class="js__container__contents">
 				<section class="js__container__contents__profile">
 					<h2 class="title__widget">LIM, JUNE SU</h2>
 					<section class="js__container__contents__profile--section contents__text__widget">
@@ -62,9 +71,14 @@
 					</div>
 				</section>
 			</article>
-			<article id="pc" class="js__container__contents contents--second">
+			<!-- // 프로필 -->
+			<!-- 포트폴리오 pc -->
+			<article id="pc" class="js__container__contents">
 				<section class="js__container__contents__project">
-					<h2 class="title__widget">Portfolio</h2>
+					<h2 class="title__widget">
+						<div>Portfolio</div>
+						<p>pc</p>
+					</h2>
 					<div class="js__container__contents__project--section">
 						<div class="section__title">PORTFOLIO</div>
 						<!-- text bg -->
@@ -324,13 +338,17 @@
 							</div>
 						</section>
 					</div>
-					<div class="port__bg__1"></div>
 					<div class="port__bg__2"></div>
 				</section>
 			</article>
-			<article id="mobile" class="js__container__contents contents--third">
+			<!-- // 포트폴리오 pc -->
+			<!-- 포트폴리오 mobile -->
+			<article id="mobile" class="js__container__contents">
 				<section class="js__container__contents__photo">
-					<h2 class="title__widget">Portfolio</h2>
+					<h2 class="title__widget">
+						<div>Portfolio</div>
+						<p>mo</p>
+					</h2>
 					<div class="js__container__contents__photo__contents">
 						<ul>
 							<li class="photo__contents">
@@ -429,6 +447,7 @@
 					</div>
 				</section>
 			</article>
+			<!-- //포트폴리오 mobile -->
 		</section>
 	</main>
 </body>

@@ -1,9 +1,9 @@
 //헤더 푸터 퀵매뉴 호출(공통 레이아웃) //추후 삭제
-ajaxHtmlCall('.header','GET','layout/header.html','html', true, headerFunctions);
-ajaxHtmlCall('.quick','GET','layout/quick.html','html', true, quickFunctions);
+ajaxHtmlCall('.js__header','GET','layout/header.html','html', true, headerFunctions);
+ajaxHtmlCall('.js__quick','GET','layout/quick.html','html', true, quickFunctions);
 
 
-$('.js__container__contents').show();
+$('.js').show();
 
 controlFunctions();
 

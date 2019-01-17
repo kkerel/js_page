@@ -1,0 +1,120 @@
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  // style.css
+  .title__widget{font-size:80px;}
+
+  // portfolio text effect
+  .section3{
+    .title--effect{
+      &.active{
+        div{
+          &:nth-child(1){transform: translate3d(0px, 0px, 0px);}
+          &:nth-child(2){transform: translate3d(0px, 30px, 0px);}
+          &:nth-child(3){transform: translate3d(0px, 60px, 0px);}
+          &:nth-child(4){transform: translate3d(0px, 90px, 0px);}
+          &:nth-child(5){transform: translate3d(0px, 120px, 0px);}
+        }
+      }
+    }
+  }
+
+  /* contents text */
+  .contents__text__widget{
+    dl{
+      dt{font-size:20px; line-height:40px; font-weight:bold; color:#ffac27; @include textShadow;}
+      dd{font-size:16px; color:#fff; line-height:34px; font-family:''; @include textShadow; font-weight:bold;
+        a{color:#fff;}
+      }
+    }
+  }
+  // style.css
+  .js{
+    &__header--title{top:35px; left:50px;}
+    &__header--menu{top:35px; right:50px;}
+    .home{
+      .prologue{font-size:80px; padding:10px;}
+      &--visual{background-size:480px;}
+    }
+    // menu
+    &__quick{
+      .menu{
+        a{font-size:20px;}
+      }
+    }
+    // container
+    &__container{
+      &__contents{padding-top:0px;
+        h2{
+          p{top:80px; left:160px; margin-left:0px;}
+        }
+        // profile section
+        &__profile{min-height:0px;
+          &--section{padding:50px;}
+          &--image{
+            .profile__bg__2{top:200px; left:500px;}
+            .profile__bg__3{top:90px; left:40px; background-size:50px;}
+            .profile__bg__5{top:500px; right:50px;}
+          }
+        }
+        // project section
+        &__project{
+          &--section{margin-top:100px;
+            .section__title{top:70px; left:0px; margin-left:0; font-size:30px;}
+            .title--effect{top:0px; left:0px; margin-left:0px;
+              div{width:70px; height:70px; top:0; left:40px; margin-left:0;}
+            }
+            .inner__section{
+              &.first__section{background-size:70%;}
+              &__contents{
+                .inner__section__contents__info{width:45%!important; padding-right:10px!important; text-align:left!important; min-width:0px!important;}
+                .inner__section__contents__visual__wrapper{width:45%!important; margin:0px!important;}
+                &.product--first{transform:translate3d(0px, 160px, 0px);
+                  &.active{transform:translate3d(0px, 180px, 0px)}
+                }
+                &.product--second{transform:translate3d(0px, 195px, 0px);
+                  &.active{transform:translate3d(0px, 215px, 0px)}
+                }
+                &.product--third{transform:translate3d(0px, 230px, 0px);
+                  &.active{transform:translate3d(0px, 250px, 0px)}
+                }
+                &.product--seventh{transform:translate3d(0px, 100px, 0px);
+                  &.active{transform:translate3d(0px, 150px, 0px)}
+                  .inner__section__contents__info{width:90%!important; padding-top:10px;}
+                  .inner__section__contents__visual__wrapper{width:90%!important;}
+                }
+                &.product--eighth{transform:translate3d(40px, 220px, 0px);
+                  &.active{transform:translate3d(00px, 200px, 0px);}
+                  .inner__section__contents__info{width:90%!important; padding-top:10px;}
+                  .inner__section__contents__visual__wrapper{width:90%!important;
+                    a{background-size:cover;}
+                  }
+                }
+              }
+            }
+          }
+          .port__bg__2{display:none;}
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .js__header{
+    &--title{top:10px; left:10px;
+      .js__header--text{margin:13px 0px;
+        li{font-size:20px;}
+      }
+    }
+    &--menu{top:10px; right:10px;
+      .menu{
+        li{width:50px; height:50px; background-size:30px;}
+      }
+    }
+  }
+  // menu
+  .js__quick{
+    .menu{
+      a{font-size:20px;}
+    }
+  }
+}
