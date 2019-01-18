@@ -7,6 +7,12 @@ define(['jquery','jquery-ui','layout'], function($) {
 
 //index Functions
 function indexFunctions() {
+	setTimeout(function(){
+		$('.js').show();
+	},7000);
+	setTimeout(function(){
+		$('.intro').hide();
+	},7000);
 	browserCheck();
     title();
     heightCheck();
@@ -14,4 +20,5 @@ function indexFunctions() {
 	contentsFade();
     firstRotate();
     scrollActive();
+	controlFunctions();
 }
