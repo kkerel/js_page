@@ -7,11 +7,11 @@ define(['jquery','jquery-ui','layout'], function($) {
 
 //index Functions
 function indexFunctions() {
+	browserCheck();
     title();
     heightCheck();
     bodyCheck();
-    contentsFade();
-    // browserCheck();
+	contentsFade();
     firstRotate();
     scrollActive();
 }
