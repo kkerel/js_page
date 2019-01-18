@@ -42,13 +42,21 @@ function bodyCheck() {
 
 // brower ben
 function browserCheck() {
+    // var agent = navigator.userAgent.toLowerCase();
+    // if((navigator.appName == 'Netscape' && agent.indexOf('trident') !=  -1) || (agent.indexOf('msie') != -1) && agent.indexOf("safari") != -1) {
+    //     $('body').remove();
+    //     alert("현재 브라우저에서는 제공되지 않습니다.\n\n 크롬 브라우저를 사용해주시기 바랍니다.");
+    //     window.open('about:blank','_self').self.close();  // IE에서 묻지 않고 창 닫기
+    // } else {
+    //     console.log('ie아님');
+    // }
     var agent = navigator.userAgent.toLowerCase();
-    if(((navigator.appName == 'Netscape' && agent.indexOf('trident') !=  -1) || (agent.indexOf('msie') != -1))) {
+    if (agent.indexOf("chrome") != -1) {
+       console.log('chrome');
+    } else {
         $('body').remove();
         alert("현재 브라우저에서는 제공되지 않습니다.\n\n 크롬 브라우저를 사용해주시기 바랍니다.");
         window.open('about:blank','_self').self.close();  // IE에서 묻지 않고 창 닫기
-    } else {
-        console.log('ie아님');
     }
 }
 
