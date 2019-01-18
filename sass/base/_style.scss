@@ -40,7 +40,9 @@ body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 @mixin textShadow(){
 	text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
-
+@mixin titleShadow(){
+	text-shadow: 5px 5px 0px rgba(255, 255, 255, 0.3);
+}
 /* contents mobile text shadow */
 @mixin MobiletextShadow(){
 	text-shadow: 5px 5px 10px rgba(2, 75, 147, 0.3);
