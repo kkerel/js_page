@@ -1,5 +1,13 @@
 @media all and (min-width: 768px) and (max-width: 1024px) {
   // style.css
+
+  // intro
+  .intro{
+    &__title{font-size:70px!important;}
+    &__text{font-size:70px!important;}
+  }
+  
+  // title
   .title__widget{font-size:80px;}
 
   // portfolio text effect
@@ -118,6 +126,13 @@
 
 @media all and (max-width: 767px) {
   // style.css
+
+  // intro
+  .intro{
+    &__title{font-size:40px!important;}
+    &__text{font-size:40px!important;}
+  }
+  // title 
   .title__widget{font-size:45px;}
 
   // portfolio text effect

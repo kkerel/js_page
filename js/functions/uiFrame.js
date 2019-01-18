@@ -134,6 +134,7 @@ function scrollAchor() {
     });
 }
 
+// intro 
 function intro() {
     var title = $(".intro__title");
     var line = $(".intro__line");

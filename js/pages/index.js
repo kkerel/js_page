@@ -9,14 +9,12 @@ define(['jquery','jquery-ui','layout'], function($) {
 function indexFunctions() {
 	setTimeout(function(){
 		$('.js').show();
-	},7000);
-	setTimeout(function(){
 		$('.intro').hide();
+		bodyCheck();
 	},7000);
 	browserCheck();
     title();
     heightCheck();
-    bodyCheck();
 	contentsFade();
     firstRotate();
     scrollActive();
