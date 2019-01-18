@@ -42,14 +42,6 @@ function bodyCheck() {
 
 // brower ben
 function browserCheck() {
-    // var agent = navigator.userAgent.toLowerCase();
-    // if((navigator.appName == 'Netscape' && agent.indexOf('trident') !=  -1) || (agent.indexOf('msie') != -1) && agent.indexOf("safari") != -1) {
-    //     $('body').remove();
-    //     alert("현재 브라우저에서는 제공되지 않습니다.\n\n 크롬 브라우저를 사용해주시기 바랍니다.");
-    //     window.open('about:blank','_self').self.close();  // IE에서 묻지 않고 창 닫기
-    // } else {
-    //     console.log('ie아님');
-    // }
     var agent = navigator.userAgent.toLowerCase();
     if (agent.indexOf("chrome") != -1) {
        console.log('chrome');
@@ -78,21 +70,6 @@ function firstRotate() {
 
 // contents fade
 function contentsFade(){
-    // checkActive = (add) => function() {
-    //     var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-    //     var bottom_of_window = $(window).scrollTop() + $(window).height() + (add ? 370 : -100);
-    //     if (bottom_of_window > bottom_of_object) {
-    //         $(this).addClass('active');
-    //     } else if (bottom_of_window < bottom_of_object) {
-    //         $(this).removeClass('active');
-    //     }
-    // };
-    // $(window).scroll(function() {
-    //     $('.inner__section__contents').each(checkActive(true)) + 370; 
-    //     $('.photo__contents').each(checkActive(true)) + 370; 
-    //     $('.title--effect').each(checkActive(true)) + 370; 
-    // });
-
     $(window).scroll(function(){
         $('.inner__section__contents').each( function(){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -156,3 +133,17 @@ function scrollAchor() {
         }
     });
 }
+
+function intro() {
+    var title = $(".intro__title");
+    var line = $(".intro__line");
+    var text = $(".intro__text");
+    
+    title.delay(1000).animate({top: "0", opacity: "1"}, 1000, function() {
+        line.delay(500).animate({marginLeft: "0"}, 800, function() {
+            text.delay(1000).animate({bottom: "0", opacity: "1"}, 1000)
+        });
+    });
+}
+    
+    
