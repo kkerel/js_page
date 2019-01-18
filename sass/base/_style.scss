@@ -53,6 +53,17 @@ body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 	box-shadow: 15px 15px 40px 0 rgba(0, 0, 0, 0.3);
 }
 
+// main text
+@mixin textEffect() {
+	background:-webkit-linear-gradient(left, #fa7268, #5f4b8b, #ffac27); 
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent; 
+	animation-duration:5s; 
+	animation-name:textAnimate; 
+	animation-iteration-count:infinite; 
+	animation-fill-mode:forwards;
+}
+
 /* vender */
 @mixin vendor($name, $value) {
   @each $i in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
@@ -121,6 +132,15 @@ body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 	to { opacity:1; top: 50%; }
 }
 
+@-webkit-keyframes textAnimate {
+  0% {
+      background-position: 0 100px;
+  }
+  100% {
+      background-position: 100px 0;
+  }
+}
+
 // header section image
 .section1{
 	.menu--home{background:#fff url('../image/common/home.png') center no-repeat; display:block; @include boxShadow;}
@@ -150,10 +170,9 @@ body{transition: all 0.45s ease-in-out; background:#000; overflow-x:hidden;}
 	}
 }
 
-/* intro */
+// intro
 .intro {width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden;
 	.intro__title {position: relative;top: 50px; font-family:$basic-bold; text-align: center; font-size:80px; opacity: 0;}
 	.intro__line {margin:20px 0px; height:2px; width:100%; margin-left:-200%; background-color:#fff;}
 	.intro__text {position:relative; bottom:50px; font-family:$basic-bold; text-align:center; font-size:80px; opacity: 0;}
 }
-

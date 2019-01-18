@@ -6,7 +6,7 @@
         &.hidden{
           .hide{opacity:0; max-width:0px;}
         }
-        li{max-width:1em; font-family:$basic-bold; font-size:30px; color:#fff; display:inline-block; transition: all 0.4s ease-in-out; opacity:1;}
+        li{max-width:1em; font-family:$basic-bold; font-size:30px; color:#fff; display:inline-block; transition: all 0.4s ease-in-out; opacity:1; background: -webkit-linear-gradient(135deg, #FF9F65, #DED37E, #26BDA6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
       }
     }
     &--menu{width:70px; height:70px; position:fixed; top:50px; right:100px; z-index:20; color:#fff;
@@ -20,12 +20,17 @@
   &__quick{position:fixed; bottom:10px; left:10px; z-index:20; font-family:$basic-bold; font-size:30px;
     .menu{
     	.blog{
-    		a{@include textShadow; color:#fa7268;}
+    		a{@include textShadow; color:#fa7268;
+    			&:hover{color:#fc2e1f;}
+    		}
     	}
     	.github{
-    		a{@include textShadow; color:#5f4b8b;}
+    		a{@include textShadow; color:#5f4b8b;
+    			&:hover{color:#2d195c;}
+    		}
     	}
       a{width:220px; font-size:30px; text-transform:uppercase; display:block; position: relative; z-index: 1; width: 100%; height: 100%; cursor: pointer; text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+      	&:hover{color:#fff;}
         &.on{color:#fff; @include textShadow;}
       }
     }
